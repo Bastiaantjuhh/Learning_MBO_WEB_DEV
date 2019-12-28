@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>fixed</title>
+    <link type="text/css" rel="stylesheet" href="cssreset.css" />
+    <style type="text/css">
+      /* een container waarin alle divs vallen */
+      #container {
+        position: relative;
+        top: 100px;
+        left: 100px;
+        margin: 5px;
+        border: 1px dashed #000;
+        width: 225px;
+      }
+
+      /* alle divs even een mooie opmaak geven */
+      div#box1,
+      div#box2,
+      div#box3 {
+        margin: 5px;
+        padding: 5px;
+        border: 1px dashed #000;
+        background-color: #ccc;
+        width: 200px;
+        height: 100px;
+      }
+
+      /* een box om het verschil te laten zien tussen fixed en absolute */
+      #box2 {
+        position: fixed; /* absolute: dan weer in container */
+        bottom: 50px;
+        left: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="box1">box 1</div>
+      <div id="box2">
+        box 2 - fixed gepositioneerd - maak het venster maar een klein en dan
+        scrollen
+      </div>
+      <div id="box3">box 3</div>
+    </div>
+  </body>
+</html>

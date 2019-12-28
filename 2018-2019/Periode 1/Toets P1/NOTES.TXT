@@ -1,0 +1,86 @@
+=== version 1 ===
+
+#content {
+            display: flex;
+            width: 100%;
+        }
+        #flex-left {
+            order: 1;
+	flex: 1;
+            flex-basis: auto;
+        }
+        #flex-right {
+            order: 1;
+	flex: 5;
+        }
+        
+        
+==== temp data ===
+
+position: absolute;      
+border: solid 10px red;
+margin: auto;
+left: 0px;
+bottom: 0px;
+right: 0px;
+top: 0px;
+padding: 100px 70px;
+
+
+==== Back-Up Version ===
+
+body {
+            font-family: Arial;
+        }
+        #container {
+            position: absolute;      
+            margin: auto;
+            left: 0px;
+            bottom: 0px;
+            right: 0px;
+            top: 0px;     
+            display: flex;
+            height: 200px;
+            width: 100vh;
+            flex-direction: row;
+                 
+        }
+        #flex-left {
+            width: 50vh;
+            padding: 4px;
+        }
+        #flex-right {
+            width: 50vh;
+            padding: 4px;
+        }
+        form {
+            padding: 0;
+            margin: 0; 
+            display:block;
+            width: 100%;
+        }
+        #form-mail {
+            width: 80%;
+            box-sizing: border-box;
+            border: 1px dotted #a8a9b0;
+            height: 30px;
+            border-radius: 2px;
+        }
+        #form-submit {
+            width: 10%;
+            box-sizing: border-box;
+            border: 1px dotted purple;
+            background-color: purple;
+            height: 30px;
+            color: white;
+            border-radius: 2px;
+        }
+        h1 {
+            font-size: 26px;
+            line-height: 72px;
+            font-weight: bold;
+        }
+        p { 
+            line-height: 20px;
+            color: #3f46ad;
+        }

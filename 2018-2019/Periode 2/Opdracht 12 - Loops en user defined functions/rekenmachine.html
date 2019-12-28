@@ -1,0 +1,45 @@
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Opgave</title>
+  </head>
+  <body>
+    <input name="g01" id="g01" type="text" />
+    <input name="g02" id="g02" type="text" /><br /><br />
+    <button name="calc_optellen" id="calc_optellen" type="button" value="+">
+      +
+    </button>
+    <button name="calc_aftrekken" id="calc_aftrekken" type="button" value="-">
+      -
+    </button>
+    <button name="calc_delen" id="calc_delen" type="button" value="/">/</button>
+    <button name="calc_keer" id="calc_keer" type="button" value="x">x</button
+    ><br /><br />
+    <input name="antwoord" id="antwoord" type="text" />
+    <script>
+      document.getElementById("calc_optellen").onclick = function() {
+        document.getElementById("antwoord").value =
+          parseFloat(document.getElementById("g01").value) +
+          parseFloat(document.getElementById("g02").value);
+      };
+
+      document.getElementById("calc_aftrekken").onclick = function() {
+        document.getElementById("antwoord").value =
+          parseFloat(document.getElementById("g01").value) -
+          parseFloat(document.getElementById("g02").value);
+      };
+
+      document.getElementById("calc_delen").onclick = function() {
+        document.getElementById("antwoord").value =
+          parseFloat(document.getElementById("g01").value) /
+          parseFloat(document.getElementById("g02").value);
+      };
+
+      document.getElementById("calc_keer").onclick = function() {
+        document.getElementById("antwoord").value =
+          parseFloat(document.getElementById("g01").value) *
+          parseFloat(document.getElementById("g02").value);
+      };
+    </script>
+  </body>
+</html>

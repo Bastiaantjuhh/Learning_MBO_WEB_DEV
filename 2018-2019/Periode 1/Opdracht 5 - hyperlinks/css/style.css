@@ -1,0 +1,15 @@
+a:link {
+  color: #f00;
+}
+a:visited {
+  color: #ff0;
+}
+a:hover {
+  text-decoration: none;
+}
+a:focus {
+  background-color: orange;
+}
+a:active {
+  color: red;
+}

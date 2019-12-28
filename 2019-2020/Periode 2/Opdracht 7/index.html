@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>AJAX Request</title>
+  </head>
+
+  <body>
+    <h1>Zoeken naar leden tweede kamer</h1>
+    <form action="" method="">
+      <input
+        id="zoek"
+        type="text"
+        name="randofmmmm"
+        placeholder="Typ een naar hier..."
+      />
+      <input type="submit" />
+    </form>
+    <div id="laden"></div>
+    <div id="div"></div>
+    <script>
+      document.getElementById("zoek").addEventListener("keyup", function() {
+        const ajaxAPI = new XMLHttpRequest();
+        const ajaxURL =
+          "http://127.0.0.1/SCHOOL/Periode%202/Opdracht%207/ajaxtest.php?data=" +
+          document.getElementById("zoek").value;
+
+        ajaxAPI.open("GET", ajaxURL, true);
+        ajaxAPI.onreadystatechange = function() {
+          if (ajaxAPI.readyState === XMLHttpRequest.DONE) {
+            document.getElementById("div").innerHTML = ajaxAPI.responseText;
+          }
+        };
+        ajaxAPI.send();
+
+        document.getElementById("div").innerHTML =
+          "<img src='ajax-loader.gif'>";
+      });
+    </script>
+  </body>
+</html>

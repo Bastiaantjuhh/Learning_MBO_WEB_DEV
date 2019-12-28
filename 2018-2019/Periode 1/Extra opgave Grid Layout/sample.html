@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Opgave</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        grid-auto-flow: row | column | row dense | column dense;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 10% 20% 50% 20%;
+        grid-template-rows: 30px 30px;
+        grid-auto-flow: row;
+      }
+
+      .item-b {
+        background-color: greenyellow;
+      }
+
+      .item-c {
+        background-color: deeppink;
+      }
+      .item-d {
+        background-color: darkorange;
+      }
+      .item-e {
+        background-color: mediumspringgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <div class="item-b">item-b</div>
+      <div class="item-c">item-c</div>
+      <div class="item-d">item-d</div>
+      <div class="item-e">item-e</div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Opgave</title>
+  </head>
+  <body>
+    <script>
+      let uitkomst = undefined;
+      let antwoord = undefined;
+
+      function bereken(g1, g2) {
+        uitkomst = g1 + g2;
+        return uitkomst;
+      }
+      function btw_berekenen(input) {
+        antwoord = (input / 100) * 21 + input;
+        return antwoord;
+      }
+
+      const getal1 = 4;
+      const getal2 = 3;
+
+      console.log("Uitkomst optellen: " + bereken(getal1, getal2));
+      console.log("BTW: " + btw_berekenen(bereken(getal1, getal2)));
+    </script>
+  </body>
+</html>

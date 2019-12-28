@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Titel van de pagina</title>
+  </head>
+  <body>
+    <script>
+      const Agenda = [
+        ["30-1", "Pokeravond"],
+        ["31-1", "Bingo avond"],
+        ["1-2", "Inzamel actie Unicef"]
+      ];
+      const Vandaag = new Date();
+      const Dag = Vandaag.getDate();
+      const Maand = Vandaag.getMonth() + 1;
+      const DatumVandaag = Dag + "-" + Maand;
+
+      //console.log(typeof(DatumVandaag);
+      console.log(DatumVandaag);
+      console.log(Agenda.indexOf(DatumVandaag));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+function zoekLangsteWoord(string) {
+  // String.Split haalt in dit geval alle spaties uit de string
+  let str = string.split(" ");
+  let longest = 0;
+  let word = null;
+  // For loop die de lengte van de string zoekt (str.length) en dat als een zogenoemde maxium pakt
+  for (let i = 0; i < str.length; i++) {
+    if (longest < str[i].length) {
+      longest = str[i].length;
+      word = str[i];
+    }
+  }
+  return word;
+}
+
+console.log("Het langste woord is:");
+console.log(
+  zoekLangsteWoord("hallo ik woon in nederland en dat vindt ik leuk")
+);
+
+function maakHoofdletters(string) {
+  // De gehele string wordt naar LowerCase gezet, dus kleine letters GEEN hoofdletters.
+  // String.Split haalt in dit geval alle spaties uit de string
+  // Door de punt ertussenin wordt alels achter elkaar gezet
+  let stringSplitten = string.toLowerCase().split(" ");
+  for (let x = 0; x < stringSplitten.length; x++) {
+    // De CharAt functie pakt een bepaald CHARACTER uit een string
+    // De SubString functie pakt een deel van een string. Een voorbeeld is "Hello World", waarvan je alleen bijv de "World" pakt niet her eerste deel
+    stringSplitten[x] =
+      stringSplitten[x].charAt(0).toUpperCase() +
+      stringSplitten[x].substring(1);
+  }
+  return stringSplitten.join(" ");
+}
+
+console.log("Zin met hoofdletters:");
+console.log(
+  maakHoofdletters("Dit is een zin waar elk woord een hoofdletter bevat")
+);
+
+function soorterOpAlfabet(string) {
+  // De SPLIT functie wordt hier gebruikt om alle letters van het alfabet in een Array te zetten
+  let alleLetters = "abcdefghijklmnopqrstuvwxyz".split("");
+  let stringSplitten = string.split("");
+  // Reducre verkleint een Array naar een value of string
+  return alleLetters.reduce((a, b) => {
+    // .Filter zoekt naar een bepaalde deel van een string en kan deze eruit filteren
+    // Join wordt gebruikt om een bepaald deel weg te halen van een String of Array.
+    // Dit deel zorgt ervoor dat alles op ABC volgoorde wordt gezet.
+    a += stringSplitten.filter(e => e === b).join("");
+    return a;
+  }, "");
+}
+
+console.log("Gesorteerd op hoofdletters:");
+console.log(soorterOpAlfabet("Ik heb een hekel aan reizen met de trein"));

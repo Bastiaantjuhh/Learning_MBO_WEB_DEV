@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+
+<head>
+  <title>Opdracht D3.JS</title>
+  <style>
+    .axis {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+  <script>
+    // Bevolkingsdata CBS
+    // DATA: https://opendata.cbs.nl/statline/#/CBS/nl/dataset/37296NED/table?fromstatweb
+
+    let margin = {
+        top: 20,
+        right: 20,
+        bottom: 70,
+        left: 40
+      },
+      Breedte = 900 - margin.left - margin.right,
+      Hoogte = 600 - margin.top - margin.bottom;
+
+    let parseDate = d3.time.format("%Y").parse;
+    let x = d3.scale.ordinal().rangeRoundBands([0, Breedte], 0.05);
+    let y = d3.scale.linear().range([Hoogte, 0]);
+
+    let xAs = d3.svg
+      .axis()
+      .scale(x)
+      .orient("bottom")
+      .tickFormat(d3.time.format("%Y"));
+
+    let yAs = d3.svg
+      .axis()
+      .scale(y)
+      .orient("left")
+      .ticks(10);
+
+    let svg = d3
+      .select("body")
+      .append("svg")
+      .attr("width", Breedte + margin.left + margin.right)
+      .attr("height", Hoogte + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    d3.csv("cbs-bevolking.csv", function(error, data) {
+      data.forEach(function(d) {
+        d.date = parseDate(d.date);
+        d.value = +d.value;
+      });
+
+      x.domain(
+        data.map(function(d) {
+          return d.date;
+        })
+      );
+      y.domain([
+        0,
+        d3.max(data, function(d) {
+          return d.value;
+        })
+      ]);
+
+      svg
+        .append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + Hoogte + ")")
+        .call(xAs)
+        .selectAll("text")
+        .style("text-anchor", "end")
+        .attr("dx", "-.8em")
+        .attr("dy", "-.55em")
+        .attr("transform", "rotate(-90)");
+
+      svg
+        .selectAll("bar")
+        .data(data)
+        .enter()
+        .append("rect")
+        .style("fill", "green")
+        .attr("x", function(d) {
+          return x(d.date);
+        })
+        .attr("width", x.rangeBand())
+        .attr("y", function(d) {
+          return y(d.value);
+        })
+        .attr("height", function(d) {
+          return Hoogte - y(d.value);
+        });
+    });
+  </script>
+</body>

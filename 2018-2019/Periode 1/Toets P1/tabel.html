@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tabel.html</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      tr th {
+        height: 100px;
+        width: 100px;
+      }
+      #green {
+        background-color: #00ff00;
+      }
+      #yellow {
+        background-color: #ffff00;
+      }
+      #blue {
+        background-color: #0000ff;
+      }
+      #red {
+        background-color: #ff0000;
+      }
+      #grey {
+        background-color: #999999;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th id="green">1</th>
+        <th id="yellow">2</th>
+      </tr>
+      <tr>
+        <th id="blue">3</th>
+        <th rowspan="2" id="red">4</th>
+      </tr>
+      <tr>
+        <th id="grey">5</th>
+      </tr>
+    </table>
+  </body>
+</html>

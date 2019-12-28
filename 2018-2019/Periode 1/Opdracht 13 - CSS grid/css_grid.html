@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      #container {
+        display: grid;
+        width: 600px;
+
+        grid-template-areas:
+          "banner banner"
+          "main  aside"
+          "footer  footer";
+      }
+      #banner {
+        grid-area: banner;
+        background-color: deepskyblue;
+        width: 600px;
+        height: 200px;
+      }
+      #main {
+        grid-area: main;
+        background-color: crimson;
+        width: 400px;
+        height: 300px;
+      }
+      #aside {
+        grid-area: aside;
+        background-color: aqua;
+        width: 200px;
+        height: 300px;
+      }
+      #footer {
+        grid-area: footer;
+        background-color: purple;
+        width: 600px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="banner"></div>
+      <div id="main"></div>
+      <div id="aside"></div>
+      <div id="footer"></div>
+    </div>
+  </body>
+</html>

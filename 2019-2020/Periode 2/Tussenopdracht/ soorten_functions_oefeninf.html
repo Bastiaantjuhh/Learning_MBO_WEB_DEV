@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Functions opdracht</title>
+    <style>
+      div {
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="rotate"></div>
+    <script>
+      // Herschrijf onderstaande functie op de twee andere manieren.
+      // Let op: er zijn nog fouten in onderstaande code.
+
+      // Standaard Function
+      function rotate(el, deg) {
+        el.style.transform = "rotate(" + deg + "deg)";
+        return el;
+      }
+
+      // Anonymous Function
+      const rotateFunctionInVariable = function(el, deg) {
+        el.style.transform = "rotate(" + deg + "deg)";
+        return el;
+      };
+
+      // Arrow Function
+      const rotateFunctionVerkort = (el, deg) => {
+        el.style.transform = "rotate(" + deg + "deg)";
+        return el;
+      };
+
+      // Geeft een selectei terug van alle HTML ellementen die de class "ROTATE" hebben
+      const els = document.getElementsByClassName("rotate");
+
+      // Loopt door de Array met HTML ellementen van de variable "els"
+      for (let el of els) {
+        rotate(el, 50);
+        rotateFunctionInVariable(el, 50);
+        rotateFunctionVerkort(el, 50);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <script>
+      let count = 0;
+      let max = Number(window.prompt("Wat moet de max zijn?"));
+
+      //console.log(typeof(count));
+      //console.log(typeof(max));
+
+      if (max > 0) {
+        while (count !== max) {
+          console.log(count);
+          count++;
+        }
+      } else {
+        console.log("Ongeldige invoer");
+      }
+    </script>
+  </body>
+</html>

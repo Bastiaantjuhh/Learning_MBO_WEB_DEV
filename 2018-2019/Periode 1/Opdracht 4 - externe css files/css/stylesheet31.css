@@ -1,0 +1,31 @@
+body {
+  background-color: #686767;
+  font-family: Verdana;
+  color: #c7c7c7;
+}
+
+.kop .kopje .kopje2 {
+  text-align: center;
+}
+
+.kopje2 {
+  width: 50%;
+  height: 36px;
+}
+
+.text {
+  padding: 22px;
+  margin: 22px;
+}
+
+p {
+  font-size: 12px;
+}
+
+.inleiding {
+  color: #9e1913;
+}
+
+.kop2 {
+  border: 6px solid green;
+}

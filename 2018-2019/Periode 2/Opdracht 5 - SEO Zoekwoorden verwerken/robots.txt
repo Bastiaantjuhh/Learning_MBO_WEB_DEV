@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /pics/
+Sitemap: https://bastiaandehart.nl/lerrykech/sitemap.xml

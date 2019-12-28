@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>fixed</title>
+    <link type="text/css" rel="stylesheet" href="cssreset.css" />
+    <style type="text/css">
+      #box1,
+      #box2 {
+        margin: 5px;
+        padding: 5px;
+        border: 1px dashed #000;
+        background-color: #ccc;
+        width: 200px;
+        height: 100px;
+      }
+
+      #box1 {
+        position: sticky;
+        top: 150px;
+        left: 50px;
+      }
+
+      #box2 {
+        position: fixed;
+        top: 150px;
+        left: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      Dit is tekst<br />Dit is tekst<br />Dit is tekst<br />Dit is tekst<br />Dit
+      is tekst<br />Dit is tekst<br />Dit is tekst<br />Dit is tekst<br />Dit is
+      tekst<br />Dit is tekst<br />Dit is tekst<br />Dit is tekst<br />Dit is
+      tekst<br />Dit is tekst<br />Dit is tekst<br />Dit is tekst<br />Dit is
+      tekst<br />Dit is tekst<br />Dit is tekst<br />Dit is tekst<br />Dit is
+      tekst<br />Dit is tekst<br />Dit is tekst<br />Dit is tekst<br />
+    </div>
+    <div id="box1">
+      box 1 - sticky
+    </div>
+    <div id="box2">
+      box 2 - fixed
+    </div>
+    <div>
+      Dit is tekst<br />Dit is tekst<br />Dit is tekst<br />Dit is tekst<br />Dit
+      is tekst<br />Dit is tekst<br />Dit is tekst<br />Dit is tekst<br />Dit is
+      tekst<br />Dit is tekst<br />Dit is tekst<br />Dit is tekst<br />Dit is
+      tekst<br />Dit is tekst<br />Dit is tekst<br />Dit is tekst<br />Dit is
+      tekst<br />Dit is tekst<br />Dit is tekst<br />Dit is tekst<br />Dit is
+      tekst<br />Dit is tekst<br />Dit is tekst<br />Dit is tekst<br />
+    </div>
+  </body>
+</html>

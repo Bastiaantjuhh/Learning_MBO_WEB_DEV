@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <script>
+      const getal01 = parseFloat(parseInt(prompt("Voer 1 heel getal in...")));
+      const getal02 = parseFloat(parseInt(prompt("Voer 1 heel getal in...")));
+
+      document.write(
+        "<h3>Je voerde de getallen " + getal01 + " en " + getal02 + " in</h3>"
+      );
+
+      if (getal01 >= getal02) {
+        document.write(
+          "<p>" + getal01 + " is groter of gelijk aan " + getal02 + "</p>"
+        );
+      } else if (getal01 < getal02) {
+        document.write("<p>" + getal01 + " is kleiner dan " + getal02 + "</p>");
+      }
+    </script>
+  </body>
+</html>

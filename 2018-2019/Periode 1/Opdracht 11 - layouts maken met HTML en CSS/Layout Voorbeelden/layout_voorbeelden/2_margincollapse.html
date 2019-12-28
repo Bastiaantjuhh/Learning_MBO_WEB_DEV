@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <title>margin collapse</title>
+    <link type="text/css" rel="stylesheet" href="cssreset.css" />
+    <style>
+      body {
+        font-size: 12px;
+        font-family: verdana;
+        color: #666;
+        background-color: #fff;
+      }
+      #diva {
+        width: 300px;
+        border: 1px solid #000;
+      }
+      #divb {
+        width: 300px;
+        border: 1px solid #000;
+      }
+      #divc {
+        width: 300px;
+        border: 1px solid #000;
+        margin-bottom: 10px;
+      }
+      #divd {
+        width: 300px;
+        border: 1px solid #000;
+      }
+      #dive {
+        width: 300px;
+        border: 1px solid #000;
+        margin-bottom: 10px;
+      }
+      #divf {
+        width: 300px;
+        border: 1px solid #000;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="diva">
+      bovenste div
+    </div>
+    <div id="divb">
+      onderste div
+    </div>
+    <hr />
+    <div id="divc">
+      margin-bottom:10px;
+    </div>
+    <div id="divd">
+      onderste div
+    </div>
+    <hr />
+    <div id="dive">
+      margin-bottom:10px;
+    </div>
+    <div id="divf">
+      margin-top:10px; GEEN VERSCHIL MET VORIGE!
+    </div>
+  </body>
+</html>

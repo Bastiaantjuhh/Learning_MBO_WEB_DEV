@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Opgave</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: mediumspringgreen;
+        font-family: "Comic Sans MS";
+      }
+      #container .picture-container {
+        display: flex;
+        justify-content: center;
+        align-content: flex-start;
+        flex-flow: row wrap;
+        width: 100%;
+      }
+      h1 {
+        font-size: 48px;
+      }
+      .picture {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        min-width: 0;
+        margin: 32px;
+      }
+      .picture img {
+        width: 256px;
+        height: 256px;
+        border-radius: 100%;
+      }
+      .mid-text {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="mid-text">Portofolio</h1>
+    <p class="mid-text">
+      I'm a title. Click here to add<br />
+      your own text and edit me.
+    </p>
+    <div id="container">
+      <div class="picture-container">
+        <div class="picture"><img src="img/img01.jpg" alt="Bloemen" /></div>
+        <div class="picture"><img src="img/img02.png" alt="Kleurtjes" /></div>
+        <div class="picture"><img src="img/img03.jpg" alt="Brug" /></div>
+      </div>
+      <div class="picture-container">
+        <div class="picture"><img src="img/img04.jpg" alt="Restaurant" /></div>
+        <div class="picture">
+          <img src="img/img05.jpg" alt="Haamburger & Patat" />
+        </div>
+        <div class="picture"><img src="img/img06.jpg" alt="Kunstwerk" /></div>
+      </div>
+    </div>
+  </body>
+</html>

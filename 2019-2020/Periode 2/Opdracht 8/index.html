@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Opdracht 8 - JS Promises</title>
+  </head>
+
+  <body>
+    <!--
+    text/plain, text/html, and application/json.
+    -->
+    <script>
+      const restUrl = "https://www.dennisvanriet.nl/RESTAPI_PROMISES/";
+
+      fetch(restUrl, {
+        method: "GET",
+        mode: "cors",
+        headers: {
+          "Content-Type": "text/html",
+          Accept: "text/html",
+          "Access-Control-Allow-Origin": "*"
+        }
+      }).then(response => {
+        console.log(response);
+      });
+    </script>
+  </body>
+</html>

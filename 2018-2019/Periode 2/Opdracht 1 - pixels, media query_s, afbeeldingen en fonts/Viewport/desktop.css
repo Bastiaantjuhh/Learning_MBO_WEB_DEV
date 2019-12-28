@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+}
+#container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+#a {
+  background-color: hotpink;
+  flex-grow: 1;
+}
+
+#b {
+  background-color: orangered;
+  flex-grow: 1;
+}
+
+#c {
+  background-color: lightseagreen;
+  flex-grow: 1;
+}

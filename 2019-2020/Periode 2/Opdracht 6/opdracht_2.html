@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+
+  <body>
+    <script>
+      // OPDRACHT 2a
+      const arr1 = [
+        "boom",
+        "roos",
+        "vis",
+        "vuur",
+        "mus",
+        "pim",
+        "kees",
+        "miep",
+        "bel",
+        "boek"
+      ];
+      arr1.map(function(v) {
+        console.log(v);
+      });
+
+      // OPDRACHT 2b
+      const arr2 = [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ];
+      console.log(arr2.filter(v => !(v % 2)));
+
+      // OPDRACHT 3c
+      const arr3 = [8, 2, 3, 67, 8, 3, 22, 94, 1];
+      console.log(
+        arr3.reduce((getalPlus, getalHuidig) => getalPlus + getalHuidig)
+      );
+    </script>
+  </body>
+</html>

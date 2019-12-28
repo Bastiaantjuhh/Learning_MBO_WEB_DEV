@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <title>Opgave</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <style>
+      div {
+        width: 200px;
+        height: 150px;
+        background-color: aqua;
+        border-radius: 12px;
+      }
+
+      @media only screen and (max-width: 600px) {
+        div {
+          background-color: brown;
+        }
+      }
+      @media only screen and (max-width: 600px) and (orientation: landscape) {
+        div {
+          background-color: lightblue;
+        }
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+
+      #font {
+        font-style: oblique;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <h1>Dit is geschreven met het <span id="font">Roboto font.</span></h1>
+    <h2>De bestandstypes voor een background zijn:</h2>
+    <ul>
+      <li>.bmp</li>
+      <li>.gif</li>
+      <li>.png</li>
+      <li>.svg</li>
+      <li>data URIs</li>
+      <li>.webp</li>
+    </ul>
+    <h2>De bestandstypes voor fonts zijn:</h2>
+    <ul>
+      <li>.tft</li>
+      <li>.otf</li>
+      <li>.woff</li>
+      <li>.eot</li>
+      <li>.svg</li>
+    </ul>
+  </body>
+</html>
