@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Opdracht 11</title>
+  </head>
+
+  <body>
+    <script>
+      const piet = {
+        leeftijd: 16,
+        geboortedatum: "1-28-2000"
+      };
+
+      console.log(piet);
+
+      piet.setleeftijd = function(geb_datum) {
+        this.geboortedatum = geb_datum;
+        const birthday = new Date(this.geboortedatum);
+        const agedif = Date.now() - birthday.getTime();
+        const agedate = new Date(agedif);
+        this.leeftijd = Math.abs(agedate.getUTCFullYear() - 1970);
+      };
+
+      piet.setleeftijd("9-3-1960");
+
+      console.log(piet.leeftijd);
+
+      piet.telefoonnummer = "+31 6 18 55 98 01";
+      piet.naam = "Piet";
+
+      piet.show = function() {
+        console.log(
+          this.naam,
+          ", " + this.leeftijd + ", " + this.telefoonnummer
+        );
+      };
+
+      piet.show();
+    </script>
+  </body>
+</html>

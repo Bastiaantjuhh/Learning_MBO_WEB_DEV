@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<concerten>
+    <concert id="1">
+        <artist>Lana Del Rey</artist>
+        <locatie>Ziggo Dome</locatie>
+        <stad>Amsterdam, The Netherlands</stad>
+        <datum>11-01-2020</datum>
+        <tijd>20:00 tot 01:00</tijd>
+        <status>Uitverkocht</status>
+    </concert>
+    <concert id="2">
+        <artist>Lana Del Rey</artist>
+        <locatie>AccorHotels Arena</locatie>
+        <stad>Paris, France</stad>
+        <datum>14-01-2020</datum>
+        <tijd>22:00 tot 02:00</tijd>
+        <status>Uitverkocht</status>
+    </concert>
+    <concert id="3">
+        <artist>Lana Del Rey</artist>
+        <locatie>Mercedes-Benz Arena</locatie>
+        <stad>Berlin, Deutschland</stad>
+        <datum>25-01-2020</datum>
+        <tijd>19:30 tot 23:00</tijd>
+        <status>Kaarten beschikbaar</status>
+    </concert>
+</concerten>

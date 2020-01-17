@@ -1,5 +1,6 @@
 # SOURCE: https://github.com/github/gitignore/blob/master/Global/VisualStudioCode.gitignore
 .vscode/*
+!.vscode/*
 
 # SOURCE: https://github.com/github/gitignore/blob/master/Global/macOS.gitignore
 .DS_Store

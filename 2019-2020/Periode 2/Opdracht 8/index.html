@@ -4,23 +4,58 @@
   </head>
 
   <body>
-    <!--
-    text/plain, text/html, and application/json.
-    -->
+    <div id="data-plain"></div>
+    <div id="data-html"></div>
+    <div id="data-json"></div>
     <script>
       const restUrl = "https://www.dennisvanriet.nl/RESTAPI_PROMISES/";
 
+      // PLAIN
       fetch(restUrl, {
         method: "GET",
         mode: "cors",
         headers: {
-          "Content-Type": "text/html",
-          Accept: "text/html",
-          "Access-Control-Allow-Origin": "*"
+          Accept: "text/plain"
         }
-      }).then(response => {
-        console.log(response);
-      });
+      })
+        .then(function(response) {
+          return response.text();
+        })
+        .then(function(data) {
+          document.getElementById("data-plain").innerHTML =
+            "<p>" + data + "</p>";
+        });
+
+      // HTML
+      fetch(restUrl, {
+        method: "GET",
+        mode: "cors",
+        headers: {
+          Accept: "text/html"
+        }
+      })
+        .then(function(response) {
+          return response.text();
+        })
+        .then(function(data) {
+          document.getElementById("data-html").innerHTML = data;
+        });
+
+      // JSON
+      fetch(restUrl, {
+        method: "GET",
+        mode: "cors",
+        headers: {
+          Accept: "application/json"
+        }
+      })
+        .then(function(response) {
+          return response.text();
+        })
+        .then(function(data) {
+          document.getElementById("data-json").innerHTML =
+            "<pre>" + data + "</pre>";
+        });
     </script>
   </body>
 </html>
