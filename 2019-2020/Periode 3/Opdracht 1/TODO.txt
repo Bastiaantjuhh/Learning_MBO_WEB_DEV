@@ -1,0 +1,2 @@
+Nu je de filmpjes gezien hebt, zou je in staat moeten zijn om een functie te schrijven die objecten teruggeeft. Zoals in de opdracht staat: maak een functie die komeet-objecten teruggeeft en laat er een aantal zien in een <canvas>.
+

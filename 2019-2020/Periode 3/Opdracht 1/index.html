@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <title>Page</title>
+  </head>
+
+  <body>
+    <!--
+        Je hebt nu gezien hoe je objecten kunt maken met Object.create() en die kunt koppelen aan een prototype object.
+        Je kent vast spelletjes waarbij je moet schieten op kometen (die dan vervolgens ontploffen). Elke komeet in zo’n spel is een object.
+        Maak nu zelf een functie die Komeet-objecten kan teruggeven van een willekeurige diameter, snelheid, x en y startpositie en richting (een vector). Bijvoorbeeld:
+        {
+            diameter: 100,
+            snelheid: 50,
+            x: 10,
+            y: 20,
+            vector: [10,20]
+        }
+        Teken vervolgens op een canvas (<canvas>) de kometen. Ze hoeven niet te bewegen.
+    -->
+    <canvas id="canvas" width="900" height="900"></canvas>
+
+    <script>
+      // Ik wist niet hoe ik gebruik maakte van het Canvas.
+      // Hiervoor heb ik gebruik gemaakt van de MDN documentatie.
+      // Ook heb ik gebruik gemaakt van onderstaande online tutorial
+      // BRON: https://ourcodeworld.com/articles/read/49/draw-points-on-a-canvas-with-javascript-html5
+
+      const c = document.getElementById("canvas").getContext("2d");
+
+      const k = {
+        setDiameter: function(diameter) {
+          this.setDiameter = diameter;
+        },
+        setX: function(x) {
+          this.setX = x;
+        },
+        setY: function(y) {
+          this.setY = y;
+        }
+      };
+
+      function Komeet() {
+        /*
+            const objCreate = Object.create(k);
+            objCreate.setDiameter(diameter);
+            objCreate.setSnelheid(snelheid);
+            objCreate.setX(xPositie);
+            objCreate.setY(yPositie);
+            objCreate.setVector(vector);
+            return objCreate;
+            */
+
+        const objCreate = Object.create(k);
+        objCreate.setDiameter(Math.floor(Math.random() * 25));
+        objCreate.setX(Math.floor(Math.random() * 100));
+        objCreate.setY(Math.floor(Math.random() * 100));
+
+        //console.log(objCreate.getX);
+
+        c.fillStyle = "#ff0000";
+        c.beginPath();
+        c.arc(
+          Math.floor(Math.random() * 900),
+          Math.floor(Math.random() * 900),
+          Math.floor(Math.random() * 25),
+          0,
+          Math.PI * 2,
+          true
+        );
+        c.fill();
+
+        return objCreate;
+      }
+
+      for (let count = 0; count < 50; count++) {
+        const komeet = Komeet();
+      }
+    </script>
+  </body>
+</html>

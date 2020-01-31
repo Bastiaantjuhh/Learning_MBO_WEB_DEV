@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Page</title>
+  </head>
+
+  <body>
+    <h1>Locatie API</h1>
+    <script>
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            setStorage(position.coords.latitude, position.coords.longitude);
+          });
+        } else {
+          console.log(
+            "ERROR: Browser support GeoLocation niet of gebruiker heeft geen toestemming ervoor gegeven."
+          );
+        }
+      }
+
+      function setStorage(geoLat, geoLon) {
+        sessionStorage.setItem(Date.now(), geoLat + " " + geoLon);
+      }
+
+      console.log(getLocation());
+
+      // console.log(setStorage());
+    </script>
+  </body>
+</html>
