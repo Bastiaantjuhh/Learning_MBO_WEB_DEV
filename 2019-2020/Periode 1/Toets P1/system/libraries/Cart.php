@@ -510,9 +510,9 @@ class CI_Cart
 	public function get_item($row_id)
 	{
 		return in_array($row_id, array('total_items', 'cart_total'), true) or
-			!isset($this->_cart_contents[$row_id])
-			? false
-			: $this->_cart_contents[$row_id];
+			(!isset($this->_cart_contents[$row_id])
+				? false
+				: $this->_cart_contents[$row_id]);
 	}
 
 	// --------------------------------------------------------------------

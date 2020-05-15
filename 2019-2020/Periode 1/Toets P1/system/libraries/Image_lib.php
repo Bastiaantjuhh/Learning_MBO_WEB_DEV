@@ -782,9 +782,9 @@ class CI_Image_lib
 		}
 
 		return $this->rotation_angle === 'hor' or
-			$this->rotation_angle === 'vrt'
-			? $this->image_mirror_gd()
-			: $this->image_rotate_gd();
+			($this->rotation_angle === 'vrt'
+				? $this->image_mirror_gd()
+				: $this->image_rotate_gd());
 	}
 
 	// --------------------------------------------------------------------
@@ -935,11 +935,10 @@ class CI_Image_lib
 				'+' .
 				$this->y_axis;
 		} elseif ($action === 'rotate') {
-			$cmd .=
-				$this->rotation_angle === 'hor' or
-				$this->rotation_angle === 'vrt'
+			($cmd .= $this->rotation_angle === 'hor') or
+				($this->rotation_angle === 'vrt'
 					? ' -flop'
-					: ' -rotate ' . $this->rotation_angle;
+					: ' -rotate ' . $this->rotation_angle);
 		}
 		// Resize
 		else {

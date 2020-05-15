@@ -404,8 +404,8 @@ class CI_Profiler
 							config_item('charset')
 						) .
 						"'");
-				$val =
-					is_array($val) or is_object($val)
+				($val = is_array($val)) or
+					(is_object($val)
 						? '<pre>' .
 							htmlspecialchars(
 								print_r($val, true),
@@ -417,7 +417,7 @@ class CI_Profiler
 							$val,
 							ENT_QUOTES,
 							config_item('charset')
-						);
+						));
 
 				$output .=
 					'<tr><td style="width:50%;color:#000;background-color:#ddd;padding:5px;">&#36;_GET[' .
@@ -468,8 +468,8 @@ class CI_Profiler
 							config_item('charset')
 						) .
 						"'");
-				$val =
-					is_array($val) or is_object($val)
+				($val = is_array($val)) or
+					(is_object($val)
 						? '<pre>' .
 							htmlspecialchars(
 								print_r($val, true),
@@ -481,7 +481,7 @@ class CI_Profiler
 							$val,
 							ENT_QUOTES,
 							config_item('charset')
-						);
+						));
 
 				$output .=
 					'<tr><td style="width:50%;padding:5px;color:#000;background-color:#ddd;">&#36;_POST[' .
@@ -501,8 +501,8 @@ class CI_Profiler
 							config_item('charset')
 						) .
 						"'");
-				$val =
-					is_array($val) or is_object($val)
+				($val = is_array($val)) or
+					(is_object($val)
 						? '<pre>' .
 							htmlspecialchars(
 								print_r($val, true),
@@ -514,7 +514,7 @@ class CI_Profiler
 							$val,
 							ENT_QUOTES,
 							config_item('charset')
-						);
+						));
 
 				$output .=
 					'<tr><td style="width:50%;padding:5px;color:#000;background-color:#ddd;">&#36;_FILES[' .

@@ -182,9 +182,9 @@ class CI_DB_cubrid_driver extends CI_DB
 		}
 
 		return !$this->conn_id or
-			($version = cubrid_get_server_info($this->conn_id)) === false
-			? false
-			: ($this->data_cache['version'] = $version);
+			(($version = cubrid_get_server_info($this->conn_id)) === false
+				? false
+				: ($this->data_cache['version'] = $version));
 	}
 
 	// --------------------------------------------------------------------

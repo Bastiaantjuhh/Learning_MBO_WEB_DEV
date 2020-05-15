@@ -1469,12 +1469,12 @@ abstract class CI_DB_query_builder extends CI_DB_driver
 		$qb_cache_orderby = $this->qb_cache_orderby;
 		$this->qb_orderby = $this->qb_cache_orderby = array();
 
-		$result =
-			$this->qb_distinct === true or
+		($result =
+			($this->qb_distinct === true or
 			!empty($this->qb_groupby) or
 			!empty($this->qb_cache_groupby) or
-			$this->qb_limit or
-			$this->qb_offset
+			$this->qb_limit)) or
+			($this->qb_offset
 				? $this->query(
 					$this->_count_string .
 						$this->protect_identifiers('numrows') .
@@ -1487,7 +1487,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver
 						$this->_count_string .
 							$this->protect_identifiers('numrows')
 					)
-				);
+				));
 
 		if ($reset === true) {
 			$this->_reset_select();
@@ -2592,13 +2592,13 @@ abstract class CI_DB_query_builder extends CI_DB_driver
 					continue;
 				}
 
-				$this->qb_groupby[$i] =
-					$this->qb_groupby[$i]['escape'] === false or
-					$this->_is_literal($this->qb_groupby[$i]['field'])
+				($this->qb_groupby[$i] =
+					$this->qb_groupby[$i]['escape'] === false) or
+					($this->_is_literal($this->qb_groupby[$i]['field'])
 						? $this->qb_groupby[$i]['field']
 						: $this->protect_identifiers(
 							$this->qb_groupby[$i]['field']
-						);
+						));
 			}
 
 			return "\nGROUP BY " . implode(', ', $this->qb_groupby);

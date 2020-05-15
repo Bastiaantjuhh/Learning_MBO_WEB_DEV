@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Calculator</title>
+    <!---  <script type="module" src="calculate.js"></script>
+    <script type="module" src="add.js"></script>
+    <script type="module" src="divide.js"></script>
+    <script type="module" src="multiply.js"></script>
+    <script type="module" src="substract.js"></script>-->
+
+    <script type="module" src="./index.js"></script>
+    <script type="module">
+      function actie(el) {
+        const uitkomst = calculate(
+          document.getElementById("a").value,
+          document.getElementById("b").value,
+          el.value
+        );
+        document.getElementById("result").innerHTML = uitkomst;
+      }
+    </script>
+  </head>
+
+  <body>
+    <input type="number" id="a" placeholder="nummer 1" />
+    <input type="number" id="b" placeholder="nummer 2" />
+    <select id="operator" onchange="actie(this);">
+      <option value="+">plus</option>
+      <option value="-">min</option>
+      <option value="*">maal</option>
+      <option value="/">deel</option>
+    </select>
+    <div id="result"></div>
+  </body>
+</html>

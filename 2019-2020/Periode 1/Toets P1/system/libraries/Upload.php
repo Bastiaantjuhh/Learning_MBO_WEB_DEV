@@ -781,8 +781,8 @@ class CI_Upload
 	 */
 	public function set_allowed_types($types)
 	{
-		$this->allowed_types =
-			is_array($types) or $types === '*' ? $types : explode('|', $types);
+		($this->allowed_types = is_array($types)) or
+			($types === '*' ? $types : explode('|', $types));
 		return $this;
 	}
 

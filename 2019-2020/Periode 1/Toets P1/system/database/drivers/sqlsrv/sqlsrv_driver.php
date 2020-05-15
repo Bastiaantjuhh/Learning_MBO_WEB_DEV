@@ -197,11 +197,12 @@ class CI_DB_sqlsrv_driver extends CI_DB
 	 */
 	protected function _execute($sql)
 	{
-		return $this->scrollable === false or $this->is_write_type($sql)
-			? sqlsrv_query($this->conn_id, $sql)
-			: sqlsrv_query($this->conn_id, $sql, null, array(
-				'Scrollable' => $this->scrollable
-			));
+		return $this->scrollable === false or
+			($this->is_write_type($sql)
+				? sqlsrv_query($this->conn_id, $sql)
+				: sqlsrv_query($this->conn_id, $sql, null, array(
+					'Scrollable' => $this->scrollable
+				)));
 	}
 
 	// --------------------------------------------------------------------

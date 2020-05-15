@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Pagina</title>
+  </head>
+  <body>
+    <input type="text" id="invoer" name="invoer" />
+    <button id="knop"></button>
+
+    <script type="module">
+      import { lengteArray } from "./modules/library.mjs";
+
+      document.getElementById("knop").addEventListener("click", function() {
+        console.log("CLICK");
+
+        //console.log(lengteArray(document.getElementById("invoer").value));
+        alert(
+          "Het aantal comma gescheiden woorden is: " +
+            lengteArray(document.getElementById("invoer").value)
+        );
+      });
+    </script>
+  </body>
+</html>

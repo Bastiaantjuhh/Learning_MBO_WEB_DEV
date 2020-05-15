@@ -774,14 +774,13 @@ class CI_Encryption
 		);
 
 		$this->_cipher_alias($params['cipher']);
-		$params['handle'] =
-			$params['cipher'] !== $this->_cipher or
-			$params['mode'] !== $this->_mode
+		($params['handle'] = $params['cipher'] !== $this->_cipher) or
+			($params['mode'] !== $this->_mode
 				? $this->{'_' . $this->_driver . '_get_handle'}(
 					$params['cipher'],
 					$params['mode']
 				)
-				: $this->_handle;
+				: $this->_handle);
 
 		return $params;
 	}

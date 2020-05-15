@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Page</title>
+  </head>
+
+  <body>
+    <canvas id="canvas" width="900" height="900"></canvas>
+
+    <script>
+      const canvasEl = document.getElementById("canvas").getContext("2d");
+
+      function Komeet() {
+        this.diameter = 100;
+        this.snelheid = 5;
+        this.x = 200;
+        this.y = 200;
+      }
+
+      const komeet = new Komeet();
+
+      canvasEl.fillStyle = "#ff0000";
+      canvasEl.beginPath();
+      canvasEl.arc(komeet.x, komeet.y, komeet.diameter, 0, 2 * Math.PI);
+      canvasEl.fill();
+    </script>
+  </body>
+</html>
